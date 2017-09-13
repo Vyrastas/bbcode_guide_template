@@ -17,3 +17,5 @@ Feel free to extend this and host it on your own site.
 * guide_template.htm is the start page
 * Put all files in the same directory
 * Requires server-side PHP
+
+This project utilizes **Simple HTML Dom**, courtesy of Jose Solorzano: https://sourceforge.net/projects/php-html/. For more information, visit http://sourceforge.net/projects/simplehtmldom.
