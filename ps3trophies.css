@@ -1,0 +1,58 @@
+   	BODY {font: 10pt verdana; color: black}
+	DIV {font: 10pt verdana; color: black}
+    
+	TD {font: 8pt verdana; color: white; border: none}      
+	TD.m_entry {font: 10pt arial; color: white; border: none; font-weight: bold}
+	TD.m_head {font: 12pt arial; color: white; background: #800000; font-weight: bold; border-bottom: solid gray 2px; border-top: solid gray 2px; border-left: solid gray 2px; border-right: solid gray 2px}
+	TD.m_left {font: 10pt arial; color: white; background: black; font-weight: bold; border-left: solid gray 2px} 
+	TD.m_right {font: 10pt arial; color: white; background: black; font-weight: bold; border-right: solid gray 2px} 
+	TD.m_both {font: 10pt arial; color: white; background: black; font-weight: bold; border-left: solid gray 2px; border-right: solid gray 2px} 
+	TD.m_bottom {font: 10pt arial; color: white; background: black; font-weight: bold; border-left: solid gray 2px; border-right: solid gray 2px; border-bottom: solid gray 2px} 
+    
+	TD.a_head {background: #800000; border-bottom: solid gray 2px; border-top: solid gray 2px; border-left: solid gray 2px; border-right: solid gray 2px} 
+
+	TD.alpha {font: 10pt verdana; color: white; font-weight: bold;}
+	
+	TD.head {font: 10pt verdana; color: gray; font-weight: bold; border-bottom: solid gray 2px}
+	DIV.head {font: 10pt verdana; color: gray; font-weight: bold; border-bottom: solid gray 2px}  
+	DIV.alpha {font: 10pt verdana; color: white; font-weight: bold}
+
+	TD.entity {font: 18pt verdana; color: white; font-weight: bold}
+	                                                      
+	A {font: 10pt verdana; color: black; text-decoration: none}
+	A:link {font: 10pt verdana; color: black; text-decoration: none}
+	A:hover {font: 10pt verdana; color: red; text-decoration: none} 
+	A:active {font: 10pt verdana; color: gray; text-decoration: none;}          
+	
+	A.other {font: 8pt verdana; color: red; text-decoration: none}
+	A.other:link {font: 8pt verdana; color: red; text-decoration: none}
+	A.other:hover {font: 8pt verdana; color: gray; text-decoration: none} 
+	A.other:active {font: 8pt verdana; color: gray; text-decoration: none;} 
+
+	A.other2 {font: 10pt verdana; color: red; text-decoration: none}
+	A.other2:link {font: 10pt verdana; color: red; text-decoration: none}
+	A.other2:hover {font: 10pt verdana; color: gray; text-decoration: none} 
+	A.other2:active {font: 10pt verdana; color: gray; text-decoration: none;} 
+	
+	A.base {font: 8pt verdana; color: #FFFF80; text-decoration: none}
+	A.base:link {font: 8pt verdana; color: #FFFF80; text-decoration: none}
+	A.base:hover {font: 8pt verdana; color: red; text-decoration: none} 
+	A.base:active {font: 8pt verdana; color: red; text-decoration: none;}
+
+	A.base2 {font: 12pt verdana; color: #FFFF80; font-weight: bold; text-decoration: none}
+	A.base2:link {font: 12pt verdana; color: #FFFF80; font-weight: bold; text-decoration: none}
+	A.base2:hover {font: 12pt verdana; color: red; font-weight: bold; text-decoration: none} 
+	A.base2:active {font: 12pt verdana; color: red; font-weight: bold; text-decoration: none;}
+	
+	A.a_head {font: 10 pt verdana; color: white; text-decoration: none; font-weight: bold;}
+	A.a_head:hover {font: 10 pt verdana; color: silver; text-decoration: none; font-weight: bold}
+	A.a_head:link {font: 10 pt verdana; color: white; text-decoration: none; font-weight: bold} 
+	A.a_head:active {font: 10 pt verdana; color: silver; text-decoration: none; font-weight: bold} 
+	
+	A.alpha {font: 10pt verdana; color: red; text-decoration: none; font-weight: bold;}
+	A.alpha:hover {font: 10pt verdana; color: gray; text-decoration: none; font-weight: bold;}
+	A.alpha:link {font: 10pt verdana; color: red; text-decoration: none; font-weight: bold;}
+
+
+	img.gray_b {border: 2px gray solid;}
+	img.gray_b:hover {border: 2px red solid;}
