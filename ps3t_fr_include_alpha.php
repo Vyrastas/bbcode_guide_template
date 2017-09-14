@@ -4,6 +4,7 @@
 
 <H2>The Ultimate BBCode Trophy / Achievement Guide Template&trade;</H2>
 by <B>Vyrastas</B> [ <A HREF="http://www.bradmurgen.com" target="_blank">bradmurgen.com</A> | <A HREF="http://www.playstationtrophies.org/forum/members/vyrastas.html" target="_blank">pst.org<A> | <A HREF="http://www.xboxachievements.com/forum/member.php?u=293215" target="_blank">xba.com</A> ]<BR><BR>
+[ <A HREF="https://github.com/Vyrastas/bbcode_guide_template" target="_blank">GitHub</A> ] to report an issue, or view the source code for this script.<BR><BR>
 
 1) Select the first letter of your game for the respective site (NOTE: games starting with "The" will be under "T")<BR>
 2) Select your game from the list<BR>
@@ -13,8 +14,7 @@ by <B>Vyrastas</B> [ <A HREF="http://www.bradmurgen.com" target="_blank">bradmur
 playstationtrophies.org&nbsp;&nbsp;
 <?php 
 
-	echo '[ <A HREF="ps3t_game_list.php?site=ps3t&alpha=ps4" target="frame_bottom">PS4</A>&nbsp;
-		<A HREF="ps3t_game_list.php?site=ps3t&alpha=-" target="frame_bottom">0-9</A>&nbsp;
+	echo '[ <A HREF="ps3t_game_list.php?site=ps3t&alpha=-" target="frame_bottom">0-9</A>&nbsp;
 		<A HREF="ps3t_game_list.php?site=ps3t&alpha=a" target="frame_bottom">A</A>&nbsp;
 		<A HREF="ps3t_game_list.php?site=ps3t&alpha=b" target="frame_bottom">B</A>&nbsp;
 		<A HREF="ps3t_game_list.php?site=ps3t&alpha=c" target="frame_bottom">C</A>&nbsp;
@@ -47,8 +47,7 @@ playstationtrophies.org&nbsp;&nbsp;
 <BR><BR>xboxachievements.com&nbsp;&nbsp;
 <?php 
 
-	echo '[ <A HREF="ps3t_game_list.php?site=x360a&alpha=xb1" target="frame_bottom">XB1</A>&nbsp;
-		<A HREF="ps3t_game_list.php?site=x360a&alpha=-" target="frame_bottom">0-9</A>&nbsp;
+	echo '[ <A HREF="ps3t_game_list.php?site=x360a&alpha=-" target="frame_bottom">0-9</A>&nbsp;
 		<A HREF="ps3t_game_list.php?site=x360a&alpha=a" target="frame_bottom">A</A>&nbsp;
 		<A HREF="ps3t_game_list.php?site=x360a&alpha=b" target="frame_bottom">B</A>&nbsp;
 		<A HREF="ps3t_game_list.php?site=x360a&alpha=c" target="frame_bottom">C</A>&nbsp;

@@ -18,15 +18,18 @@ Based on the site you choose (PST vs XBA), it first scrapes the HTML of a game l
 
 When a user selects a game from that list, it scrapes the HTML of the game's trophy / achievement page. For example, https://www.playstationtrophies.org/game/happy-dungeons/trophies/.
 
-In other words, the script is completely reliant on the content of PST and XBA. If content is wrong in the script, it's wrong on the site, and needs to be fixed on the site.
+In other words, the script is completely reliant on the content of PST and XBA. If content (like a trophy name or description) is wrong in the script output, it's wrong on the site, and needs to be fixed on the site.
 
-The final output URL that displays in the lower frame can be determined by hacking it: http://www.vyrastas.com/ps3t_guide_template.php?site=ps3t&game=happy-dungeons. Change the `site` and `game` parameters as needed. `game` is based on the site page name for the game.
+The final output URL that displays in the lower frame can be determined by hacking it: http://www.vyrastas.com/ps3t_guide_template.php?site=ps3t&game=happy-dungeons. Change the `site` and `game` parameters as needed.
 
-Platforms (PS4, Vita, etc) are hard-coded and must be added manually to the script.
+* `site` can only be `ps3t` or `x360a`
+* `game` is the site page name for the game
+
+Platforms (PS4, Vita, etc) are hard-coded and must be added manually to the script if a new category is added to one of the sites.
 
 ## Contributing / Requests
 
-If you want me to make an update to the script, and push it to http://www.vyrastas.com/guide_template.htm, create an Issue detailing what you would like done and I'll take care of it.
+If you want me to make an update to the script, and push it to http://www.vyrastas.com/guide_template.htm, create an Issue detailing what you would like done and I'll take care of it if you're forum staff (ideally Guide Team) on either PST or XBA.
 
 Otherwise feel free to submit your own pull requests, or even make a copy to host on your own site.
 
@@ -36,4 +39,4 @@ Otherwise feel free to submit your own pull requests, or even make a copy to hos
 
 ## Acknowledgements
 
-This project utilizes **Simple HTML Dom**, courtesy of Jose Solorzano: https://sourceforge.net/projects/php-html/. For more information, visit http://sourceforge.net/projects/simplehtmldom.
+This project utilizes **Simple HTML DOM**, courtesy of Jose Solorzano: https://sourceforge.net/projects/php-html/. For more information, visit http://sourceforge.net/projects/simplehtmldom.
