@@ -221,8 +221,8 @@
             // DLC NAME
             if ($x->first_child()->class == 'newsTitle') {
                 
-                echo '[CENTER][U][B]' . $x->first_child()->plaintext .
-                '[/B][/U][/CENTER]<br><br>';
+                echo '[CENTER][B]' . $x->first_child()->plaintext .
+                '[/B][/CENTER]<br><br>';
                 echo '[B]Abbreviated Walkthrough:[/B]<br><br><br>';
                 
             }
