@@ -96,7 +96,14 @@
         
         $nextpage = 1;
         
-        for ($j = 1; $j <= 9; $j++) {
+        // Set number of pages dynamically
+		$init_html = file_get_html('http://www.' . $siteurl . '/browsegames/' . $gametype[$i] .
+										  '/' . $gamealpha . '/');
+		$table_object = $init_html->find('div.bl_la_main div.divtext table', 1);
+		$page_object = $table_object->find('td', 0);
+		$page_num = explode(" ", $page_object)[4];
+        
+        for ($j = 1; $j <= $page_num; $j++) {
             
             $k = $j+1;
             
