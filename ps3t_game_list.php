@@ -97,11 +97,17 @@
         //$nextpage = 1;
         
         // Set number of pages dynamically
-	$init_html = file_get_html('http://www.' . $siteurl . '/browsegames/' . $gametype[$i] .
-										  '/' . $gamealpha . '/');
-	$table_object = $init_html->find('div.bl_la_main div.divtext table', 1);
-	$page_object = $table_object->find('td', 0);
-	$page_num = explode(" ", $page_object)[4];
+        $init_html = file_get_html('http://www.' . $siteurl . '/browsegames/' . $gametype[$i] . '/' . $gamealpha . '/');
+        
+        if ($gamesite == 'ps3t') {
+            $table_object = $init_html->find('div.bl_la_main div.divtext table', 1);
+            $page_object = $table_object->find('td', 0);
+            $page_num = explode(" ", $page_object)[4]; }
+        else {
+            $pagination_obj = $init_html->find('div.pagination a');
+            if (count($pagination_obj) == 0) { $page_num = 1; }
+            else { $page_num = $pagination_obj[count($pagination_obj)-2]->plaintext; }
+        }
         
         for ($j = 1; $j <= $page_num; $j++) {
             
@@ -182,7 +188,7 @@
         
         $html->clear(); 
         unset($html);
-        $init_html->clear(); 
+        $init_html->clear();
         unset($init_html);
     }
     
