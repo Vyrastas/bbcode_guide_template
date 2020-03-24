@@ -94,21 +94,21 @@
         else 	{
             echo '<B>' . str_replace('%20',' ',strtoupper($gametype[$i])) . '</B><BR>'; }
         
-        $nextpage = 1;
+        //$nextpage = 1;
         
         // Set number of pages dynamically
-		$init_html = file_get_html('http://www.' . $siteurl . '/browsegames/' . $gametype[$i] .
+	$init_html = file_get_html('http://www.' . $siteurl . '/browsegames/' . $gametype[$i] .
 										  '/' . $gamealpha . '/');
-		$table_object = $init_html->find('div.bl_la_main div.divtext table', 1);
-		$page_object = $table_object->find('td', 0);
-		$page_num = explode(" ", $page_object)[4];
+	$table_object = $init_html->find('div.bl_la_main div.divtext table', 1);
+	$page_object = $table_object->find('td', 0);
+	$page_num = explode(" ", $page_object)[4];
         
         for ($j = 1; $j <= $page_num; $j++) {
             
-            $k = $j+1;
+            //$k = $j+1;
             
             // Only pull the next page if it exists
-            if ($nextpage == 1) {
+            //if ($nextpage == 1) {
                 
                 // TEMP XB1 WORKAROUND
                 //if ($gamealpha == 'xb1') {
@@ -118,7 +118,7 @@
                 $html = file_get_html('http://www.' . $siteurl . '/browsegames/' . $gametype[$i] .
                                       '/' . $gamealpha . '/' . $j);
                 //	}
-                $nextpage = 0;
+                //$nextpage = 0;
                 
                 foreach($html->find('a') as $x) {
                     
@@ -168,13 +168,13 @@
                     //		$nextpage = 1; } 
                     //}
                     //else {
-                    if ($x->href == '/browsegames/' . $gametype[$i] . '/' . $gamealpha . '/' . $k) {
-                        $nextpage = 1; }	
+                    //if ($x->href == '/browsegames/' . $gametype[$i] . '/' . $gamealpha . '/' . $k) {
+                    //    $nextpage = 1; }	
                     //}
                     
                 }
                 
-            }
+            //}
             
         }
         
@@ -182,7 +182,8 @@
         
         $html->clear(); 
         unset($html);
-        
+        $init_html->clear(); 
+        unset($init_html);
     }
     
 ?>   
