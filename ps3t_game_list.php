@@ -26,13 +26,6 @@
     // Create gametype based on site
     if ($gamesite == 'ps3t') {
         
-        // TEMP PS4 WORKAROUND
-        //if ($gamealpha == 'ps4') {
-        //	$siteurl = 'playstationtrophies.org';
-        //	$linkreplace = '/trophies/';
-        //	$numtypes = 0;
-        //	$gametype[0] = 'ps4'; }
-        //else {
         $siteurl = 'playstationtrophies.org';
         $linkreplace = '/trophies/';
         $numtypes = 4;
@@ -41,17 +34,9 @@
         $gametype[2] = 'psn';
         $gametype[3] = 'vita';
         $gametype[4] = 'japanese';
-        //	}
     }
     else {
         
-        // TEMP XB1 WORKAROUND
-        //if ($gamealpha == 'xb1') {
-        //	$siteurl = 'xboxachievements.com';
-        //	$linkreplace = '/achievements/';
-        //	$numtypes = 0;
-        //	$gametype[0] = 'xbox%20one'; }
-        //else {
         $siteurl = 'xboxachievements.com';
         $linkreplace = '/achievements/';
         $numtypes = 7;
@@ -63,7 +48,6 @@
         $gametype[5] = 'pc';
         $gametype[6] = 'win8';
         $gametype[7] = 'wp7';
-        //	}
     }
     
     echo '<BR>';
@@ -72,12 +56,14 @@
         echo '<FONT COLOR=darkblue SIZE=3><B>PLAYSTATION TROPHIES</B>'; }
     else {
         echo '<FONT COLOR=darkgreen SIZE=3><B>XBOX ACHIEVEMENTS</B>'; }
+    
     echo ' - ';
     
     if ($gamealpha == '-') {
         echo '0-9'; }
     else {
         echo strtoupper($gamealpha); }
+    
     echo ' games</FONT><BR><BR>';
     
     // Retrieve the DOM from a given URL
@@ -91,10 +77,8 @@
             echo '<B>XBOX ONE</B><BR>'; }
         else if ($gametype[$i] == 'app') {
             echo '<B>APPLICATIONS</B><BR>'; }
-        else 	{
+        else {
             echo '<B>' . str_replace('%20',' ',strtoupper($gametype[$i])) . '</B><BR>'; }
-        
-        //$nextpage = 1;
         
         // Set number of pages dynamically
         $init_html = file_get_html('http://www.' . $siteurl . '/browsegames/' . $gametype[$i] . '/' . $gamealpha . '/');
@@ -109,90 +93,61 @@
             else { $page_num = $pagination_obj[count($pagination_obj)-2]->plaintext; }
         }
         
+        $init_html->clear();
+        unset($init_html);
+        
         for ($j = 1; $j <= $page_num; $j++) {
             
-            //$k = $j+1;
-            
-            // Only pull the next page if it exists
-            //if ($nextpage == 1) {
-                
-                // TEMP XB1 WORKAROUND
-                //if ($gamealpha == 'xb1') {
-                //	$html = file_get_html('http://www.' . $siteurl . '/games/' . $gametype[$i] .
-                //		'/' . $j . '/'); }
-                //else {
-                $html = file_get_html('http://www.' . $siteurl . '/browsegames/' . $gametype[$i] .
+            $html = file_get_html('http://www.' . $siteurl . '/browsegames/' . $gametype[$i] .
                                       '/' . $gamealpha . '/' . $j);
-                //	}
-                //$nextpage = 0;
-                
-                foreach($html->find('a') as $x) {
-                    
-                    if (strncmp($x->href, '/game/', 6) == 0) {
-                        
-                        if ($x->class == 'linkT') {
-                            
-                            $y = $x->href;
-                            
-                            // get the game name
-                            $game = str_replace($linkreplace,'',str_replace('/game/','',$y));
-                            
-                            echo '<A HREF="ps3t_guide_template.php?site=' . $gamesite .
-                            '&game=' . $game . '">';
-                            
-                            // remove any blank unnecessary spaces
-                            $gamename = str_replace('&nbsp;','',$x->plaintext);
-                            
-                            if ($forumnamecheck) {
-                                echo $gamename . '</A>';  }
-                            else {
-                                echo $gamename . '</A><BR>';  }
-                            
-                        }
-                        
-                    }	
-                    
-                    // FORUM LINK CHECK
-                    if ((strncmp($x->href, '/forum/', 7) == 0) && ($forumnamecheck)) {
-                        
-                        if ($x->class == 'linkT') {
-                            
-                            $y = $x->href;
-                            
-                            // get the game name
-                            $forum = str_replace('/forum/','',$y);
-                            
-                            echo '|<A HREF="http://www.' . $siteurl . $y . '" target="_blank">' . $forum . '</A><BR>';
-                            
-                        }
-                        
-                    }	
-                    
-                    // TEMP XB1 WORKAROUND
-                    //if ($gamealpha == 'xb1') {
-                    //	if ($x->href == '/games/xbox one/' . $k . '/') {
-                    //		$nextpage = 1; } 
-                    //}
-                    //else {
-                    //if ($x->href == '/browsegames/' . $gametype[$i] . '/' . $gamealpha . '/' . $k) {
-                    //    $nextpage = 1; }	
-                    //}
-                    
-                }
-                
-            //}
+            foreach($html->find('a') as $x) {
             
+                if (strncmp($x->href, '/game/', 6) == 0) {
+                    
+                    if ($x->class == 'linkT') {
+                        
+                        $y = $x->href;
+                        
+                        // get the game name
+                        $game = str_replace($linkreplace,'',str_replace('/game/','',$y));
+                        
+                        echo '<A HREF="ps3t_guide_template.php?site=' . $gamesite .
+                                    '&game=' . $game . '">';
+                        
+                        // remove any blank unnecessary spaces
+                        $gamename = str_replace('&nbsp;','',$x->plaintext);
+                        
+                        if ($forumnamecheck) {
+                            echo $gamename . '</A>';  }
+                        else {
+                            echo $gamename . '</A><BR>'; }
+                    }
+                }
+                // FORUM LINK CHECK
+                if ((strncmp($x->href, '/forum/', 7) == 0) && ($forumnamecheck)) {
+                
+                    if ($x->class == 'linkT') {
+                    
+                        $y = $x->href;
+                        
+                        // get the game name
+                        $forum = str_replace('/forum/','',$y);
+                        
+                        echo '|<A HREF="http://www.' . $siteurl . $y . '" target="_blank">' . $forum . '</A><BR>';
+                        
+                    }
+                }
+            }
         }
         
         echo '<BR>';
         
-        $html->clear(); 
+        $html->clear();
         unset($html);
-        $init_html->clear();
-        unset($init_html);
+        
     }
     
-?>   
+?>
 
 <BR><BR>
 
