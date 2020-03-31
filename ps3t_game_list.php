@@ -86,7 +86,8 @@
         if ($gamesite == 'ps3t') {
             $table_object = $init_html->find('div.bl_la_main div.divtext table', 1);
             $page_object = $table_object->find('td', 0);
-            $page_num = explode(" ", $page_object)[4]; }
+            $page_num = substr(explode(" ", $page_object)[4], 0, -3); }
+
         else {
             $pagination_obj = $init_html->find('div.pagination a');
             if (count($pagination_obj) == 0) { $page_num = 1; }
