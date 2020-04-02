@@ -53,9 +53,9 @@
     echo '<BR>';
     
     if ($gamesite == 'ps3t') {
-        echo '<FONT COLOR=darkblue SIZE=3><B>PLAYSTATION TROPHIES</B>'; }
+        echo '<FONT COLOR=darkblue SIZE=3><STRONG>PLAYSTATION TROPHIES</STRONG>'; }
     else {
-        echo '<FONT COLOR=darkgreen SIZE=3><B>XBOX ACHIEVEMENTS</B>'; }
+        echo '<FONT COLOR=darkgreen SIZE=3><STRONG>XBOX ACHIEVEMENTS</STRONG>'; }
     
     echo ' - ';
     
@@ -70,15 +70,15 @@
     for ($i = 0; $i <= $numtypes; $i++) {
         
         if (($gametype[$i] == 'retail') && ($gamesite == 'ps3t')) {
-            echo '<B>PS3 RETAIL</B><BR>'; }
+            echo '<STRONG>PS3 RETAIL</STRONG><BR>'; }
         else if ($gametype[$i] == 'psn') {
-            echo '<B>PS3 DIGITAL</B><BR>'; }
+            echo '<STRONG>PS3 DIGITAL</STRONG><BR>'; }
         else if ($gametype[$i] == 'xbox-one') {
-            echo '<B>XBOX ONE</B><BR>'; }
+            echo '<STRONG>XBOX ONE</STRONG><BR>'; }
         else if ($gametype[$i] == 'app') {
-            echo '<B>APPLICATIONS</B><BR>'; }
+            echo '<STRONG>APPLICATIONS</STRONG><BR>'; }
         else {
-            echo '<B>' . str_replace('%20',' ',strtoupper($gametype[$i])) . '</B><BR>'; }
+            echo '<STRONG>' . str_replace('%20',' ',strtoupper($gametype[$i])) . '</STRONG><BR>'; }
         
         // Set number of pages dynamically
         $init_html = file_get_html('http://www.' . $siteurl . '/browsegames/' . $gametype[$i] . '/' . $gamealpha . '/');
