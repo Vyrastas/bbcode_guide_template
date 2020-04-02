@@ -3,14 +3,14 @@
 <DIV ALIGN=left> 
 
 <H2>The Ultimate BBCode Trophy / Achievement Guide Template&trade;</H2>
-by <B>Vyrastas</B> [ <A HREF="http://www.bradmurgen.com" target="_blank">bradmurgen.com</A> | <A HREF="http://www.playstationtrophies.org/forum/members/vyrastas.html" target="_blank">pst.org<A> | <A HREF="http://www.xboxachievements.com/forum/member.php?u=293215" target="_blank">xba.com</A> ]<BR><BR>
+by <STRONG>Vyrastas</STRONG> [ <A HREF="http://www.bradmurgen.com" target="_blank">bradmurgen.com</A> | <A HREF="http://www.playstationtrophies.org/forum/members/vyrastas.html" target="_blank">pst.org<A> | <A HREF="http://www.xboxachievements.com/forum/member.php?u=293215" target="_blank">xba.com</A> ]<BR><BR>
 [ <A HREF="https://github.com/Vyrastas/bbcode_guide_template" target="_blank">GitHub</A> ] to report an issue, or view the source code for this script.<BR><BR>
 
 1) Select the first letter of your game for the respective site (NOTE: games starting with "The" will be under "T")<BR>
 2) Select your game from the list<BR>
 3) Copy and paste the raw BBCode into a text editor and add your trophy / achievement explanations<BR><BR>
 <HR><BR>
-<B>CHOOSE YOUR WEAPON</B>&nbsp;&nbsp;[ <A HREF="ps3t_blank.htm" target="frame_bottom">clear</A> ]<BR><BR>
+<STRONG>CHOOSE YOUR WEAPON</STRONG>&nbsp;&nbsp;[ <A HREF="ps3t_blank.htm" target="frame_bottom">clear</A> ]&nbsp;&nbsp;<SPAN style="color: red"><STRONG>Note: </STRONG>Letters with lots o' games may take 6-10 seconds to display.</SPAN><BR><BR>
 playstationtrophies.org&nbsp;&nbsp;
 <?php 
 
